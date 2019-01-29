@@ -23,6 +23,7 @@ namespace LogDemo
         public string Get()
         {
             _msLogger.LogInformation("ILogger information");
+            _msLogger.LogInformation("ILogger information with properties", false, 1, "two");
             _msLogger.LogInformation("ILogger templated information at {CustomProperty}", DateTime.UtcNow);
 
             _nlogLogger.Log(LogLevel.Info, "NLog information");
